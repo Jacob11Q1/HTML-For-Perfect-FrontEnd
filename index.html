@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For the SEO -->
+    <meta name="description" content="Brew&Co coffee shop in Bethlehem - fresh beans, cozy vibes, and a menu that actually hits." />
+    <title>HTML Challenge 1</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- For Better and big accessibility win in the future -->
+    <a href="#home">Skip to main content</a>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#home" aria-label="Brew and Co home">Brew&Co</a>
+
+        <!-- NavBar Section -->
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#club">Club</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main id="home">
+        <!-- Hero Section Title -->
+        <section aria-labelledby="hero-title">
+            <h1 id="hero-title">Coffee that actually hits.</h1>
+            <p>Fresh beans. Smooth blends. Cozy vibes.</p>
+            <a href="#menu">View menu</a>
+            <a href="#contact">Contact us</a>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" aria-labelledby="menu-title">
+            <h2 id="menu-title">Menu</h2>
+
+            <img loading="lazy" src="assets/coffee-cup.jpg" alt="A cup of coffee on a wooden table" width="600">
+
+            <h3>Categories</h3>
+            <ul>
+                <li>Hot coffee</li>
+                <li>Iced coffee</li>
+                <li>Tea & matcha</li>
+                <li>Desserts</li>
+            </ul>
+
+            <h3>Pricing</h3>
+            <table>
+                <caption>Coffee pricing (shekels)</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Espresso</td>
+                        <td>Single</td>
+                        <td>₪10</td>
+                    </tr>
+                    <tr>
+                        <td>Latte</td>
+                        <td>Medium</td>
+                        <td>₪16</td>
+                    </tr>
+                    <tr>
+                        <td>Cappuccino</td>
+                        <td>Medium</td>
+                        <td>₪16</td>
+                    </tr>
+                    <tr>
+                        <td>Iced Coffee</td>
+                        <td>Large</td>
+                        <td>₪18</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Featured Drinks -->
+            <h3>Featured Drinks</h3>
+            <!-- Menu Componetns Usin Article -->
+            <article>
+                <h4>Espresso</h4>
+                <p>Strong, short, and honest.</p>
+            </article>
+
+            <article>
+                <h4>Latte</h4>
+                <p>Smooth espresso + milk.</p>
+            </article>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About</h2>
+            <p>Our story goes here.</p>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" aria-labelledby="reviews-title">
+            <h2 id="reviews-title">Reviews</h2>
+
+            <figure>
+                <blockquote>
+                    <p>This place is a daily ritual.</p>
+                </blockquote>
+                <figcaption>-- Sara</figcaption>
+            </figure>
+        </section>
+
+        <!-- Contact Us Section mixing it with join the club -->
+        <section id="club" aria-labelledby="club-title">
+            <h2 id="club-title">Join the coffee club</h2>
+            <p>Weekly offers, new drinks, and zero spam. Promise.</p>
+
+            <!-- Form Section -->
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Your details</legend>
+                    <p>
+                        <label for="full-name">Full name</label><br />
+                        <input id="full-name" name="fullName" type="text" autocomplete="name" required />
+                    </p>
+
+                    <p>
+                        <label for="club-email">Email</label><br />
+                        <input id="club-email" name="email" type="email" autocomplete="email" required />
+                    </p>
+
+                    <p>
+                        <label for="club-password">Password</label><br />
+                        <input id="club-password" name="password" type="password" minlength="8" required />
+                    </p>
+                    <p id="password-hint">Password must be at least 8 characters.</p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership</legend>
+
+                    <p>Choose your tier:</p>
+
+                    <p>
+                        <input id="basic" name="tier" type="radio" value="basic" required />
+                        <label for="basic">Basic</label>
+                    </p>
+
+                    <p>
+                        <input id="pro" name="tier" type="radio" value="pro" />
+                        <label for="pro">Pro</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+
+                    <p>
+                        <label for="drink">Favorite drink</label><br />
+                        <select id="drink" name="favoriteDrink" required>
+                            <option value="">-- Choose one --</option>
+                            <option value="espresso">Espresso</option>
+                            <option value="latte">Latte</option>
+                            <option value="cappuccino">Cappuccino</option>
+                            <option value="iced">Iced coffee</option>
+                            <option value="matcha">Matcha</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <input id="terms" name="terms" type="checkbox" required />
+                        <label for="terms">I agree to the terms</label>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Join</button>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <small>© 2026 Brew&Co</small>
+
+        <!-- Address very important -->
+        <address>
+            <p>Bethlehem, Palestine</p>
+            <p>Phone: <a href="tel:+972590000000">+972 59 000 0000</a></p>
+            <p>Email: <a href="mailto:hello@brewco.com">hello@brewco.com</a></p>
+        </address>
+    </footer>
+
+</body>
+</html>
